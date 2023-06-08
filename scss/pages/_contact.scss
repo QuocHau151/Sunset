@@ -1,0 +1,167 @@
+.schero.contact {
+  background: url(../img/banner-contact.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+.sccontact {
+  padding-top: 200px;
+  padding-bottom: 238px;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 120px;
+    color: #fff;
+    place-items: center;
+    .info {
+      position: relative;
+      h1 {
+        font-family: "ol";
+        font-size: 72px;
+        line-height: 80px;
+        margin-bottom: 55px;
+      }
+      p {
+        font-family: "mr";
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 55px;
+      }
+      .img {
+        img {
+          position: absolute;
+          right: 0;
+          top: -50px;
+          z-index: 100;
+        }
+      }
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .awa {
+          display: flex;
+          align-items: baseline;
+          justify-content: left;
+          flex-direction: column;
+          h2 {
+            font-family: "ol";
+            font-size: 40px;
+            margin-bottom: 10px;
+            line-height: 60px;
+          }
+          span {
+            display: block;
+            font-family: "mr";
+            font-size: 16px;
+            line-height: 30px;
+            border-bottom: 1px solid #ffff;
+            margin-bottom: 2px;
+          }
+        }
+        .contacts {
+          display: flex;
+          align-items: baseline;
+          justify-content: left;
+          flex-direction: column;
+          h2 {
+            font-family: "ol";
+            font-size: 40px;
+            margin-bottom: 10px;
+            line-height: 60px;
+          }
+          span {
+            font-family: "mr";
+            font-size: 16px;
+            line-height: 30px;
+          }
+          img {
+            margin-right: 15px;
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+.value {
+  padding-top: 176px;
+  padding-bottom: 203px;
+
+  .item {
+    max-width: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-right: 50px;
+    .text {
+      h3 {
+        font-family: "ol";
+        font-size: 24px;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-family: "mr";
+        font-size: 14px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+@include md {
+  .sccontact {
+    .container {
+      gap: 30px;
+    }
+  }
+}
+@include sm {
+  .sccontact {
+    .container {
+      grid-template-columns: 1fr;
+      .info {
+        order: 1;
+        .img {
+          img {
+            right: -50px;
+          }
+        }
+      }
+      .img-contact {
+        order: 2;
+        display: none;
+      }
+    }
+  }
+}
+@include xs {
+  .sccontact {
+    .container {
+      .info {
+        .img {
+          img {
+            right: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+@include xxs {
+  .sccontact {
+    padding: 100px 0;
+    .container {
+      .info {
+        h1 {
+          font-size: 60px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  .value {
+    padding: 100px 0;
+  }
+}

@@ -1,0 +1,64 @@
+.nav {
+  position: relative;
+
+  display: none;
+  align-items: center;
+  flex-direction: column;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    width: 30%;
+    height: 100vh;
+    background-color: $bg-cl;
+    right: 0;
+    top: var(--height-header);
+    z-index: 999;
+    li {
+      font-family: "ol";
+      font-size: 24px;
+      color: #fff;
+      line-height: 30px;
+      margin-bottom: 50px;
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        margin-top: 10px;
+        position: absolute;
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #b68c2d;
+        transition: width 0.3s;
+      }
+      &:hover::after {
+        color: #b68c2d;
+        width: 100%;
+      }
+      &:hover {
+        color: #b68c2d;
+      }
+    }
+  }
+
+  .btn {
+    margin-bottom: 100px;
+    cursor: pointer;
+  }
+  &.active {
+    display: block;
+  }
+}
+@include xxs {
+  .nav ul {
+    width: 100%;
+  }
+  .nav .btn {
+    display: none;
+  }
+}

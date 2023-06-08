@@ -1,0 +1,138 @@
+// css footer
+footer {
+  background-color: #090c0f;
+  padding-top: 100px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    .footer__left {
+      h4 {
+        font-family: "ol";
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 30px;
+      }
+      &-add {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        img {
+          margin-right: 20px;
+        }
+        p {
+          font-family: "mr";
+          font-size: 16px;
+          color: #fff;
+        }
+      }
+      &-phone {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        img {
+          margin-right: 20px;
+        }
+        p {
+          font-family: "mr";
+          font-size: 16px;
+          color: #fff;
+        }
+      }
+      .footer__left-mail {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 20px;
+        }
+        p {
+          font-family: "mr";
+          font-size: 16px;
+          color: #fff;
+        }
+      }
+    }
+    .footer__center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 390px;
+      img {
+        margin-bottom: 30px;
+      }
+      h3 {
+        font-family: "ci";
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .footer__center-social {
+        img {
+          margin-right: 15px;
+        }
+      }
+    }
+    .footer-right {
+      text-align: right;
+      h4 {
+        font-family: "ol";
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 30px;
+      }
+      p {
+        font-family: "mr";
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 15px;
+        span {
+          color: #b68c2d;
+        }
+      }
+    }
+  }
+  .footer__bottom {
+    background-color: #0e1317;
+    height: 80px;
+    position: relative;
+
+    p {
+      @include mid;
+      color: #fff;
+      font-family: "mr";
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}
+@include sm {
+  footer {
+    .container {
+      flex-direction: column;
+      align-items: inherit;
+      .footer-right {
+        text-align: left;
+      }
+      .footer__center {
+        align-items: baseline;
+        margin-top: 60px;
+        margin-bottom: 30px;
+        max-width: inherit;
+        h3 {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+@include xs {
+  footer {
+    padding-top: 50px;
+    .container {
+      padding-bottom: 30px;
+    }
+  }
+}

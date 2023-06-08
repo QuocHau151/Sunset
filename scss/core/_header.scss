@@ -1,0 +1,184 @@
+// css header
+header {
+  background-color: #0e1317;
+  position: fixed;
+  width: 100vw;
+  z-index: 1000;
+  top: 0;
+  .container-fluid {
+    max-width: 1350px;
+    height: var(--height-header);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      margin-top: 10px;
+    }
+    .menu {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mid;
+        li {
+          font-family: "or";
+          font-size: 12px;
+          color: #fff;
+          padding: 13px;
+          cursor: pointer;
+          position: relative;
+
+          &::after {
+            margin-top: 10px;
+            position: absolute;
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #b68c2d;
+            transition: width 0.3s;
+          }
+          &:hover::after {
+            color: #b68c2d;
+            width: 70%;
+          }
+          &:hover {
+            color: #b68c2d;
+          }
+        }
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      .lang {
+        margin-right: 30px;
+        position: relative;
+        span {
+          font-family: "or";
+          font-size: 14px;
+          color: #fff;
+          cursor: pointer;
+        }
+        .lang-option {
+          display: none;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          width: 80px;
+          height: 233px;
+          background-color: #0e1317;
+          position: absolute;
+          color: #fff;
+          left: -56px;
+          top: 63px;
+          span {
+            padding: 10px 15px;
+            &:hover {
+              color: #b68c2d;
+            }
+          }
+          &.active {
+            display: flex;
+          }
+        }
+      }
+      .order-btn {
+        width: 150px;
+        height: 53px;
+        background-color: #b68c2d;
+        position: relative;
+        &:hover {
+          background-color: #1c2329;
+          cursor: pointer;
+        }
+        p {
+          @include mid;
+          font-family: "or";
+          font-size: 14px;
+          color: #fff;
+        }
+      }
+      .button-nav {
+        position: relative;
+        cursor: pointer;
+        padding: 15px;
+        span {
+          content: "";
+          width: 30px;
+          height: 2px;
+          background-color: #fff;
+          position: absolute;
+          right: 0;
+          &::before {
+            content: "";
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            top: -10px;
+          }
+          &::after {
+            content: "";
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            bottom: -10px;
+          }
+        }
+        &.active {
+          span {
+            display: none;
+          }
+          &::before {
+            content: "";
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            transform: rotate(45deg);
+          }
+          &::after {
+            content: "";
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 8px;
+            right: 0;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1176px) {
+  .button-nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 1175px) {
+  header {
+    .menu {
+      display: none;
+    }
+    .right {
+      .order-btn {
+        display: none;
+      }
+    }
+  }
+}
+@include xxs {
+  header {
+    .container-fluid .right .lang .lang-option {
+      top: 48px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.schero.event {
+  background: url(../img/banner-event.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+.events {
+  padding: 120px 0;
+  .btn {
+    margin: auto;
+    margin-top: 64px;
+  }
+}
+@include sm {
+  .list .item .text .list-title a {
+    line-height: 0;
+  }
+}
